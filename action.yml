@@ -21,6 +21,8 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'false'
   args:
     - ${{ inputs.kodi-version }}
     - ${{ inputs.addon-id }}
